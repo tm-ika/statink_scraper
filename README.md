@@ -1,0 +1,2 @@
+# statink_scraper
+Stat.inkに格納されたSplatoon2の成績をエクセル上で管理するためのスクレインピングツール

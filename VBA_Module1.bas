@@ -1,5 +1,5 @@
 Attribute VB_Name = "Module1"
-'“ü—ÍÏ‚İƒZƒ‹‚Ì‰E’[‚ğo—Í
+'å…¥åŠ›æ¸ˆã¿ã‚»ãƒ«ã®å³ç«¯ã‚’å‡ºåŠ›
 Function column_end(ByVal she As String) As String
     Sheets(she).Select
     i = 1
@@ -10,18 +10,18 @@ Function column_end(ByVal she As String) As String
     column_end = i - 1
 End Function
 
-'ŒŸ¬Ñ‚ğ“ü—Í‚·‚é‚½‚ß‚Ì—ñ‚ğ’Ç‰Á
+'æœˆæ¬¡æˆç¸¾ã‚’å…¥åŠ›ã™ã‚‹ãŸã‚ã®åˆ—ã‚’è¿½åŠ 
 Function func_insert_column(ByVal she As String)
     Sheets(she).Select
     Columns("D:E").Select
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromRightOrBelow
-    Sheets(she).Range("D2").Value = "’ÊZ¬Ñ" + vbCrLf + Str(Date)
-    Sheets(she).Range("E2").Value = "’PŒ" + vbCrLf + Str(Month(Now) - 1) + "Œ––"
+    Sheets(she).Range("D2").Value = "é€šç®—æˆç¸¾" + vbCrLf + Str(Date)
+    Sheets(she).Range("E2").Value = "å˜æœˆ" + vbCrLf + Str(Month(Now) - 1) + "æœˆæœ«"
     Sheets(she).Range("D26").Value = "=COUNT(D3:D25)"
     Sheets(she).Range("E26").Value = "=COUNT(E3:E25)"
 End Function
 
-'ƒ\[ƒg
+'ã‚½ãƒ¼ãƒˆ
 Function func_sort(ByVal she As String, ByVal key As String, ByVal ord As String)
     en = column_end(she)
     Sheets(she).Select
@@ -46,30 +46,30 @@ Function func_sort(ByVal she As String, ByVal key As String, ByVal ord As String
 
 End Function
 
-'ŒŸ¬Ñ‚ğ“ü—Í‚·‚é‚½‚ß‚Ì—ñ‚ğ’Ç‰Á
+'æœˆæ¬¡æˆç¸¾ã‚’å…¥åŠ›ã™ã‚‹ãŸã‚ã®åˆ—ã‚’è¿½åŠ 
 Sub Insert_columns()
-    Call func_insert_column("1_ƒGƒŠƒAŸ—¦")
-    Call func_insert_column("3_ƒ„ƒOƒ‰Ÿ—¦")
-    Call func_insert_column("2_ƒzƒRŸ—¦")
-    Call func_insert_column("4_ƒAƒTƒŠŸ—¦")
+    Call func_insert_column("1_ã‚¨ãƒªã‚¢å‹ç‡")
+    Call func_insert_column("2_ãƒ¤ã‚°ãƒ©å‹ç‡")
+    Call func_insert_column("3_ãƒ›ã‚³å‹ç‡")
+    Call func_insert_column("4_ã‚¢ã‚µãƒªå‹ç‡")
     Sheets("macro").Select
 End Sub
 
-'ƒXƒe[ƒW–¼iƒAƒ‹ƒtƒ@ƒxƒbƒgj‚ÅƒtƒBƒ‹ƒ^[‚ğ¸‡ƒ\[ƒg
+'ã‚¹ãƒ†ãƒ¼ã‚¸åï¼ˆã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆï¼‰ã§ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’æ˜‡é †ã‚½ãƒ¼ãƒˆ
 Sub sort_stage()
-    Call func_sort("1_ƒGƒŠƒAŸ—¦", "A", "As")
-    Call func_sort("3_ƒ„ƒOƒ‰Ÿ—¦", "A", "As")
-    Call func_sort("2_ƒzƒRŸ—¦", "A", "As")
-    Call func_sort("4_ƒAƒTƒŠŸ—¦", "A", "As")
+    Call func_sort("1_ã‚¨ãƒªã‚¢å‹ç‡", "A", "As")
+    Call func_sort("2_ãƒ¤ã‚°ãƒ©å‹ç‡", "A", "As")
+    Call func_sort("3_ãƒ›ã‚³å‹ç‡", "A", "As")
+    Call func_sort("4_ã‚¢ã‚µãƒªå‹ç‡", "A", "As")
     Sheets("macro").Select
 End Sub
 
-'¬Ñ‚ÅƒtƒBƒ‹ƒ^[‚ğ~‡ƒ\[ƒg
+'æˆç¸¾ã§ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’é™é †ã‚½ãƒ¼ãƒˆ
 Sub sort_stats()
-    Call func_sort("1_ƒGƒŠƒAŸ—¦", "D", "Des")
-    Call func_sort("3_ƒ„ƒOƒ‰Ÿ—¦", "D", "Des")
-    Call func_sort("2_ƒzƒRŸ—¦", "D", "Des")
-    Call func_sort("4_ƒAƒTƒŠŸ—¦", "D", "Des")
+    Call func_sort("1_ã‚¨ãƒªã‚¢å‹ç‡", "D", "Des")
+    Call func_sort("2_ãƒ¤ã‚°ãƒ©å‹ç‡", "D", "Des")
+    Call func_sort("3_ãƒ›ã‚³å‹ç‡", "D", "Des")
+    Call func_sort("4_ã‚¢ã‚µãƒªå‹ç‡", "D", "Des")
     Sheets("macro").Select
 End Sub
 

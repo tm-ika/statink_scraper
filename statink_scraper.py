@@ -78,7 +78,7 @@ print("*************")
 query = "/spl2/stat/by-map-rule?filter%5Brule%5D=standard-gachi-any"
 url = "https://stat.ink/" + my_account + query
 
-print("[>] 通算成績の出力(勝率%)　※ガチマだけでなく２リグ、４リグ、プラベの成績を含む")
+print("[>] 通算成績の出力(勝率%)")
 print("[>] HTTPreq to stat.ink...")
 print(url)
 
